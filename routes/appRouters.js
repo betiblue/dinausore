@@ -8,11 +8,11 @@ var Dinausore = require('../models/dataSchema');
 router.post('/create', (req,res,next)=>{
     var newDinausore = new Dinausore({   
         login:req.body.login,
-       // pwd:req.body.pwd,
-        //age:req.body.age,
-        //race:req.body.race,
-        //famille:req.body.famille,
-        //nourriture: req.body.nourriture, 
+        pwd:req.body.pwd,
+        age:req.body.age,
+        race:req.body.race,
+        famille:req.body.famille,
+        nourriture: req.body.nourriture, 
       
     })
 
@@ -30,19 +30,9 @@ router.post('/create', (req,res,next)=>{
 router.post('/login', (req,res,next)=>{
     var newDinausore = new Dinausore({   
         login:req.body.login,
-       // pwd:req.body.pwd,
-        //age:req.body.age,
-        //race:req.body.race,
-        //famille:req.body.famille,
-        //nourriture: req.body.nourriture, 
+        pwd:req.body.pwd,
+         
       
-    })
-
-    newDinausore.save((err,dinausore) =>{
-        if (err)
-        res.status(500).json({errmsq: err});
-        res.status(200).json({msg: dinausore});
-    
     })
     
 });
