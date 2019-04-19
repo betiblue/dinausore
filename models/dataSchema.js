@@ -16,4 +16,4 @@ var dinausoreSchema = mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('dinausore',dinausoreSchema)
+module.export = mongoose.model('dinausore',dinausoreSchema)
